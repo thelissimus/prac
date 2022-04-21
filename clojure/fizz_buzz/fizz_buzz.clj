@@ -5,5 +5,9 @@
         (zero? (mod n 5)) "Buzz"
         :else n))
 
-(println
- (map fizz-buzz (range 1 101)))
+;; There is another way (from docs) which I like more.
+(defn fizz-buzz [n]
+  (cond-> nil
+    (zero? (mod n 3)) (str "Fizz")
+    (zero? (mod n 5)) (str "Buzz")
+    :always           (or n)))
