@@ -1,5 +1,12 @@
+# Config
 .idea/
 .lsp/
 .clj-kondo/
 
+*.iml
+
+# Build
+out/
 target/
+
+*.class
